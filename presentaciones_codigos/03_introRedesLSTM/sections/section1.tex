@@ -1,0 +1,165 @@
+
+\section{Limitaciones de las RNA's} % Sections are added in order to organize your presentation into discrete blocks, all sections and subsections are automatically output to the table of contents as an overview of the talk but NOT output in the presentation as separate slides
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Predicción}
+	De acuerdo a las estadísticas de la Ciudad de México, si una persona mide 1.70 m, ¿Cuál será su peso en kg?
+	\begin{center}
+		\begin{tikzpicture}
+			% Dibujo del cuadro alrededor de la red neuronal con color de fondo crema
+			\fill[cream] (0,0) rectangle (4,5);
+			
+			% Capa de entrada
+			\foreach \y in {1,2,3,4}
+			\node[circle, draw, fill=blue!50] (Input-\y) at (1,\y) {};
+			
+			% Capa oculta
+			\foreach \y [count=\s] in {1.5,2.5,3.5}
+			\node[circle, draw, fill=green!50] (Hidden-\s) at (2,\y) {};
+			
+			% Capa de salida
+			\node[circle, draw, fill=red!50] (Output) at (3,2.5) {};
+			
+			% Conexiones
+			\foreach \y in {1,2,3,4}
+			\foreach \s in {1,...,3}
+			\draw[->] (Input-\y) -- (Hidden-\s);
+			\foreach \s in {1,...,3}
+			\draw[->] (Hidden-\s) -- (Output);
+			
+			% Texto de entrada y predicción con animación
+			% Las flechas se extienden más allá de las paredes del rectángulo
+			\draw[<-] ($(Input-2)!0.5!(Input-3)-(1.5,0)$) -- ++(-0.5,0) node[left] {\only<1->{1.70}};
+			\draw[->] (Output) -- ($(Output)+(1.5,0)$) node[right] {\only<2->{80}};
+		\end{tikzpicture}
+	\end{center}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Clasificación}
+	¿Cuál es el nombre del cantante?
+	\begin{center}
+		\begin{tikzpicture}
+			% Dibujo del cuadro alrededor de la red neuronal con color de fondo crema
+			\fill[cream] (0,0) rectangle (4,5);
+			
+			% Capa de entrada
+			\foreach \y in {1,2,3,4}
+			\node[circle, draw, fill=blue!50] (Input-\y) at (1,\y) {};
+			
+			% Capa oculta
+			\foreach \y [count=\s] in {1.5,2.5,3.5}
+			\node[circle, draw, fill=green!50] (Hidden-\s) at (2,\y) {};
+			
+			% Capa de salida
+			\node[circle, draw, fill=red!50] (Output) at (3,2.5) {};
+			
+			% Conexiones
+			\foreach \y in {1,2,3,4}
+			\foreach \s in {1,...,3}
+			\draw[->] (Input-\y) -- (Hidden-\s);
+			\foreach \s in {1,...,3}
+			\draw[->] (Hidden-\s) -- (Output);
+			
+			% Imagen de entrada más grande y más a la izquierda con animación
+			\uncover<1->{
+				\node[left=3.5cm of Input-2.center, anchor=center] (image) {\includegraphics[width=.25\textwidth]{maluma.png}};
+			}
+			
+			% Flecha apuntando a las neuronas de entrada
+			\draw[->] ([xshift=-2cm]$(Input-2)!.5!(Input-3)$) -- ($(Input-2)!.5!(Input-3)$);
+			
+			% Texto de predicción con animación
+			\uncover<2->{
+				\draw[->] (Output) -- ($(Output)+(1.5,0)$) node[right] {Maluma};
+			}
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{¿Secuencias?}
+	\vspace{-2mm}
+	Angelito va en el metro camino a su casa y se encuentra en esta estación... \textit{¿Cuál es la siguiente?}
+	\vspace{8mm}
+	
+	\begin{tikzpicture}[node distance=2cm and 0cm]
+		% Dibujo del cuadro alrededor de la red neuronal con color de fondo crema y esquinas redondeadas
+		% Ajustar el rectángulo para que sea más estrecho y no tan ancho
+		\fill[cream, rounded corners] (3,0.5) rectangle (8,4.5); % Se ajusta para ser más estrecho
+		
+		% Capa de entrada, centrada dentro del cuadro crema
+		\foreach \y in {1,2,3,4}
+		\node[circle, draw, fill=blue!50] (Input-\y) at (4,\y) {};
+		
+		% Capa oculta, centrada dentro del cuadro crema
+		\foreach \y [count=\s] in {1.5,2.5,3.5}
+		\node[circle, draw, fill=green!50] (Hidden-\s) at (5.5,\y) {};
+		
+		% Capa de salida, centrada dentro del cuadro crema
+		\node[circle, draw, fill=red!50] (Output) at (7,2.5) {};
+		
+		% Conexiones
+		\foreach \y in {1,2,3,4}
+		\foreach \s in {1,...,3}
+		\draw[->] (Input-\y) -- (Hidden-\s);
+		\foreach \s in {1,...,3}
+		\draw[->] (Hidden-\s) -- (Output);
+		
+		% Imagen de entrada, centrada con respecto a la red neuronal
+		\uncover<2->{
+			\node[anchor=center] (image) at (1cm,2.5cm) {\includegraphics[width=.2\textwidth]{pinosuarez.png}};
+		}
+		
+		% Flecha desde la imagen de entrada a las neuronas de entrada
+		\uncover<2->{
+			\draw[->] (image.east) -- ($(Input-2)!.5!(Input-3)$);
+		}
+		
+		% Imagen de predicción, movida más hacia la derecha
+		\uncover<3->{
+			\node[right=3cm of Output.center, anchor=center] (prediccion) {\includegraphics[width=.25\textwidth]{esponja.jpeg}};
+		}
+		
+		% Flecha desde la capa de salida a la imagen de predicción
+		\uncover<3->{
+			\draw[->] (Output) -- (prediccion.west);
+		}
+	\end{tikzpicture}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{¿Secuencias?}
+	¿Qué debería conocer la Red Neuronal para poder decir qué estación sigue?
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[width=0.5\linewidth]{bat.jpg}
+			\end{center}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item<2-> Saber en qué linea está.
+				\item<3-> \textit{\textbf{Recordar}} en qué línea está.
+				\item<4-> \textbf{\textit{Recordar}} en qué estaciones estuvo antes (para deducir la linea).
+				\item<5-> TENER MEMORIA.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+
+
+
+%------------------------------------------------
+

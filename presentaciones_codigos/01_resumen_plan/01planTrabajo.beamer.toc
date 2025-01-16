@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Resumen}{3}{0}{1}
+\beamer@sectionintoc {2}{Plan de Trabajo}{9}{0}{2}

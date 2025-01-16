@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{¿Qué son las RNA's?}{3}{0}{1}
+\beamer@sectionintoc {2}{Predicción en una RNA}{7}{0}{2}
+\beamer@sectionintoc {3}{Entrenamiento de una RNA}{15}{0}{3}

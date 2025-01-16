@@ -1,0 +1,90 @@
+
+\section{Resumen} % Sections are added in order to organize your presentation into discrete blocks, all sections and subsections are automatically output to the table of contents as an overview of the talk but NOT output in the presentation as separate slides
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Objetivo}
+	\begin{itemize}
+		\item Diseñar un modelo de Aprendizaje Profundo para predecir mediante la detección de patrones en una serie de tiempo, los futuros ingresos hospitalarios de enfermedades respiratorias en algunas zonas de la Ciudad de México, con el fin de observar la relación que existe entre los casos de hospitalización por enfermedades respiratorias y variables que evalúan la calidad del aire. 
+	\end{itemize}
+	
+	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Datos}
+	Se cuenta con una base de datos que registra los lugares de la Ciudad de México donde ocurrieron la mayor cantidad de casos de enfermedades respiratorias que requirieron hospitalización en el periodo de enero de 2009 a diciembre de 2022, en donde encontramos datos asociados a los antecedentes de los pacientes de enfermedades respiratorias, así como datos del proceso de su enfermedad.
+	
+	\vspace{7mm}
+	Además, por cada registro (según su localidad), se tienen datos atmosféricos asociados con los que se pretende realizar la predicción. 
+
+        
+\end{frame}
+
+\begin{frame}
+	\frametitle{Observaciones respecto a los datos}
+	\begin{itemize}
+		
+		\item A cada fila existente en la base de datos, se le asocia una \texttt{clave\_res} que indica \textit{\textbf{el lugar específico}} en donde se registra la cantidad de personas que sufrieron de alguna enfermedad respiratoria.
+		
+		\item Esto sugiere que quizá la cantidad de muestras no alcance para realizar una predicción \textbf{\textit{global}} \textit{(a nivel Ciudad de México)} con precisión adecuada.
+		
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Observaciones respecto a los datos}
+	\begin{itemize}
+		
+		\item Cada alcaldía de la Ciudad de México se encuentra representada con al menos una localidad lo largo de la serie de tiempo.
+		
+		\item El set de datos se encuentra des-balanceado espacialmente \textit{(en Tlalpan hay más localidades registradas que en Iztacalco, por ejemplo)}.
+		
+		\begin{itemize}
+			\item Esto sugiere que para algunas zonas la predicción puede no ser representativo a lo que esté sucediendo realmente
+		\end{itemize}
+		
+		\item Como se cuentan con datos que abarcan solamente hasta el año 2022, y el objetivo es realizar predicciones para años como 2024 y 2025, se necesitarán realizar estimaciones de los datos faltantes que corresponden al periodo de enero a diciembre de 2023. Lo que puede afectar la precisión de la predicción del modelo.
+		
+		
+		
+		
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Metas}
+	
+	Contamos con un aproximado de 5 semanas en las que se pretenden lograr los siguientes objetivos específicos:
+	
+	\begin{itemize}
+		\item Análisis exploratorio, limpieza y preparación de los datos.
+		\item Construcción, entrenamiento y prueba de los modelo LSTM para predecir los datos atmosféricos faltantes que corresponden al periodo de enero a diciembre de 2023 y hasta el momento en que se deseé obtener la predicción de los ingresos respiratorios.
+		\begin{itemize}
+			\item \textit{Por cada variable atmosférica que se deseé utilizar, se debe entrenar un modelo diferente \textbf{(n\_variables).}}
+			\item \textit{Por cada zona de estudio se debe entrenar un modelo diferente \textbf{(m\_zonas).}}
+			\item Entonces se tendrán un total de \textit{\textbf{n\_variables X m\_zonas}} modelos específicos.
+		\end{itemize}
+				
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Metas}
+	
+	\begin{itemize}
+		\item Construcción del conjunto de \textit{train y tes}t para cada predictor de ingresos respiratorios.
+		\item Construcción, entrenamiento y prueba de los modelo LSTM para predecir los ingresos respiratorios por cada zona de interés de estudio.
+		
+	\end{itemize}
+	
+\end{frame}
+
+%------------------------------------------------
+

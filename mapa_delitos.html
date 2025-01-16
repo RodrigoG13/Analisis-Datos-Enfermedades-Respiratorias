@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9a87f1af6802207d8fb033bd08aac730 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9a87f1af6802207d8fb033bd08aac730" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9a87f1af6802207d8fb033bd08aac730 = L.map(
+                "map_9a87f1af6802207d8fb033bd08aac730",
+                {
+                    center: [19.387915312528246, -99.0949750727854],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_be6e07449c982e6bca27d87311646df4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_be6e07449c982e6bca27d87311646df4.addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var polygon_24f4fef4aa9a0bd804793bc69aa22e75 = L.polygon(
+                [[19.390666242946608, -99.0883891738739], [19.39036924294661, -99.08858417387388], [19.387810242946603, -99.09024617387391], [19.383991242946607, -99.0927271738739], [19.385715242946606, -99.1003061738739], [19.388826242946607, -99.09986717387389], [19.39110624294661, -99.09956417387389], [19.39068024294661, -99.0954091738739], [19.390502242946607, -99.09331217387388], [19.390295242946607, -99.0911671738739], [19.390264242946607, -99.09048517387389], [19.391381242946608, -99.08999317387389], [19.39087824294661, -99.08893417387391], [19.390666242946608, -99.0883891738739]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var marker_4622f6133332337a18cb08e62598308b = L.marker(
+                [19.38866125, -99.09866966],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_8b20fce182f885fe6c20efc09f0d952c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4622f6133332337a18cb08e62598308b.setIcon(icon_8b20fce182f885fe6c20efc09f0d952c);
+        
+    
+        var popup_145f59cd3e4078e1dac0af8a2d14c114 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a785d832bb70fc6065145a4c8166b825 = $(`<div id="html_a785d832bb70fc6065145a4c8166b825" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 15/06/2007</div>`)[0];
+                popup_145f59cd3e4078e1dac0af8a2d14c114.setContent(html_a785d832bb70fc6065145a4c8166b825);
+            
+        
+
+        marker_4622f6133332337a18cb08e62598308b.bindPopup(popup_145f59cd3e4078e1dac0af8a2d14c114)
+        ;
+
+        
+    
+    
+            var marker_b14af2cdb827e485f134bba6a36d0fb6 = L.marker(
+                [19.38535344, -99.0983146],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_2a221c3177ce81e5ea6f6313a3920105 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b14af2cdb827e485f134bba6a36d0fb6.setIcon(icon_2a221c3177ce81e5ea6f6313a3920105);
+        
+    
+        var popup_eb63f7a9952ec1d18dc46d8ed3204d3c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba696c70467a25245b6bde25a399a328 = $(`<div id="html_ba696c70467a25245b6bde25a399a328" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 17/12/2022</div>`)[0];
+                popup_eb63f7a9952ec1d18dc46d8ed3204d3c.setContent(html_ba696c70467a25245b6bde25a399a328);
+            
+        
+
+        marker_b14af2cdb827e485f134bba6a36d0fb6.bindPopup(popup_eb63f7a9952ec1d18dc46d8ed3204d3c)
+        ;
+
+        
+    
+    
+            var marker_1cd0d3dcc0a0942e1273b4073711d3b2 = L.marker(
+                [19.38473703, -99.09599673],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_0dc9e3ca90ab97b0ab2b4504073edae6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1cd0d3dcc0a0942e1273b4073711d3b2.setIcon(icon_0dc9e3ca90ab97b0ab2b4504073edae6);
+        
+    
+        var popup_8d462b796edaef6dee657a1b50848aab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7d09ab8f68c275e27c37973aa1cc59c = $(`<div id="html_d7d09ab8f68c275e27c37973aa1cc59c" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 03/01/2023</div>`)[0];
+                popup_8d462b796edaef6dee657a1b50848aab.setContent(html_d7d09ab8f68c275e27c37973aa1cc59c);
+            
+        
+
+        marker_1cd0d3dcc0a0942e1273b4073711d3b2.bindPopup(popup_8d462b796edaef6dee657a1b50848aab)
+        ;
+
+        
+    
+    
+            var marker_f5777ed9039cba5db1ce94ba05f824b8 = L.marker(
+                [19.38961352, -99.09373898],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_a9ab615654277472aaff6eaad12f385c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f5777ed9039cba5db1ce94ba05f824b8.setIcon(icon_a9ab615654277472aaff6eaad12f385c);
+        
+    
+        var popup_0c2a8c42ae75d071ca4992e60793d15b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a477374515a050e35ce68562b8c7f0b6 = $(`<div id="html_a477374515a050e35ce68562b8c7f0b6" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 10/01/2023</div>`)[0];
+                popup_0c2a8c42ae75d071ca4992e60793d15b.setContent(html_a477374515a050e35ce68562b8c7f0b6);
+            
+        
+
+        marker_f5777ed9039cba5db1ce94ba05f824b8.bindPopup(popup_0c2a8c42ae75d071ca4992e60793d15b)
+        ;
+
+        
+    
+    
+            var marker_cc6055b81b25de31bd151c94c1c4d771 = L.marker(
+                [19.38951579, -99.09411818],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_565980c08461f89888c33e5ec7f321e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cc6055b81b25de31bd151c94c1c4d771.setIcon(icon_565980c08461f89888c33e5ec7f321e8);
+        
+    
+        var popup_6b0a59d5942bc566f88b2d2c22c70ef6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8129f198b1b778047e56e90994f0ca5 = $(`<div id="html_e8129f198b1b778047e56e90994f0ca5" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 29/01/2023</div>`)[0];
+                popup_6b0a59d5942bc566f88b2d2c22c70ef6.setContent(html_e8129f198b1b778047e56e90994f0ca5);
+            
+        
+
+        marker_cc6055b81b25de31bd151c94c1c4d771.bindPopup(popup_6b0a59d5942bc566f88b2d2c22c70ef6)
+        ;
+
+        
+    
+    
+            var marker_00964788723e504ff3f7384d23bf06f9 = L.marker(
+                [19.38556818, -99.09935832],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_903ddd491839a5e2aada7aac34979930 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_00964788723e504ff3f7384d23bf06f9.setIcon(icon_903ddd491839a5e2aada7aac34979930);
+        
+    
+        var popup_86405bc1043398c3649444d0fc5966d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f67df545d1d5d8b36eeade634b8aaae5 = $(`<div id="html_f67df545d1d5d8b36eeade634b8aaae5" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 07/02/2023</div>`)[0];
+                popup_86405bc1043398c3649444d0fc5966d5.setContent(html_f67df545d1d5d8b36eeade634b8aaae5);
+            
+        
+
+        marker_00964788723e504ff3f7384d23bf06f9.bindPopup(popup_86405bc1043398c3649444d0fc5966d5)
+        ;
+
+        
+    
+    
+            var marker_eb1adbfa8f7edc43634b7c2e9afd5927 = L.marker(
+                [19.38677261, -99.09173504],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_7dcc4230ecd6d4ec30336ffb47427cff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_eb1adbfa8f7edc43634b7c2e9afd5927.setIcon(icon_7dcc4230ecd6d4ec30336ffb47427cff);
+        
+    
+        var popup_e7aac6c19e95177b599363582fd988ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d36b13a5c42b24142d21f7eb2313335 = $(`<div id="html_4d36b13a5c42b24142d21f7eb2313335" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 10/02/2023</div>`)[0];
+                popup_e7aac6c19e95177b599363582fd988ed.setContent(html_4d36b13a5c42b24142d21f7eb2313335);
+            
+        
+
+        marker_eb1adbfa8f7edc43634b7c2e9afd5927.bindPopup(popup_e7aac6c19e95177b599363582fd988ed)
+        ;
+
+        
+    
+    
+            var marker_e7212d28fc9d42756ec3541c90f30a61 = L.marker(
+                [19.39032668, -99.09601416],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_ebf973f06f03d176161798312db23e3c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e7212d28fc9d42756ec3541c90f30a61.setIcon(icon_ebf973f06f03d176161798312db23e3c);
+        
+    
+        var popup_cda4856f7a41c355226c0f69d0de858f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c0b601003aec6f8eeb531d9eb17e37d9 = $(`<div id="html_c0b601003aec6f8eeb531d9eb17e37d9" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 12/02/2023</div>`)[0];
+                popup_cda4856f7a41c355226c0f69d0de858f.setContent(html_c0b601003aec6f8eeb531d9eb17e37d9);
+            
+        
+
+        marker_e7212d28fc9d42756ec3541c90f30a61.bindPopup(popup_cda4856f7a41c355226c0f69d0de858f)
+        ;
+
+        
+    
+    
+            var marker_438347e4203fb9e7f7bdff4e5f9563a8 = L.marker(
+                [19.38995224, -99.09971142],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_130480ee06c6ee18f317ee5455ec94c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_438347e4203fb9e7f7bdff4e5f9563a8.setIcon(icon_130480ee06c6ee18f317ee5455ec94c8);
+        
+    
+        var popup_3339669f0f48437796e8b8b8164a03aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c59560ae7670e8ba1c1f9509c5f26d53 = $(`<div id="html_c59560ae7670e8ba1c1f9509c5f26d53" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 12/02/2023</div>`)[0];
+                popup_3339669f0f48437796e8b8b8164a03aa.setContent(html_c59560ae7670e8ba1c1f9509c5f26d53);
+            
+        
+
+        marker_438347e4203fb9e7f7bdff4e5f9563a8.bindPopup(popup_3339669f0f48437796e8b8b8164a03aa)
+        ;
+
+        
+    
+    
+            var marker_d15ff9f2c8990f010410583b02d07593 = L.marker(
+                [19.38635261, -99.0957166],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_ac97fef9153ec218388185bd3b3e4d76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d15ff9f2c8990f010410583b02d07593.setIcon(icon_ac97fef9153ec218388185bd3b3e4d76);
+        
+    
+        var popup_15fa4dee2b3409ea5f78724d06905e42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f00f7e1e5d92287eb201539b5c5af625 = $(`<div id="html_f00f7e1e5d92287eb201539b5c5af625" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 14/02/2023</div>`)[0];
+                popup_15fa4dee2b3409ea5f78724d06905e42.setContent(html_f00f7e1e5d92287eb201539b5c5af625);
+            
+        
+
+        marker_d15ff9f2c8990f010410583b02d07593.bindPopup(popup_15fa4dee2b3409ea5f78724d06905e42)
+        ;
+
+        
+    
+    
+            var marker_4fe3b5c1ac8d122b3b8fcfa44d880353 = L.marker(
+                [19.38848423, -99.09035727],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_add9577194cf50944a96747342635e19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4fe3b5c1ac8d122b3b8fcfa44d880353.setIcon(icon_add9577194cf50944a96747342635e19);
+        
+    
+        var popup_19bf514eb82f7975c29229e07727145b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6eabcb468e319aa4f816e5e14d665b7 = $(`<div id="html_b6eabcb468e319aa4f816e5e14d665b7" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 01/03/2023</div>`)[0];
+                popup_19bf514eb82f7975c29229e07727145b.setContent(html_b6eabcb468e319aa4f816e5e14d665b7);
+            
+        
+
+        marker_4fe3b5c1ac8d122b3b8fcfa44d880353.bindPopup(popup_19bf514eb82f7975c29229e07727145b)
+        ;
+
+        
+    
+    
+            var marker_60a022ef71456e9e9dd79bd57065d6c7 = L.marker(
+                [19.38860568, -99.09726486],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_1ab141d994777db49304ffe614fa994e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_60a022ef71456e9e9dd79bd57065d6c7.setIcon(icon_1ab141d994777db49304ffe614fa994e);
+        
+    
+        var popup_a04eec933c58a3df10ee40d94e0f95f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7cf4dbec5cc3e4b67d716d43748f93a2 = $(`<div id="html_7cf4dbec5cc3e4b67d716d43748f93a2" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 13/03/2023</div>`)[0];
+                popup_a04eec933c58a3df10ee40d94e0f95f6.setContent(html_7cf4dbec5cc3e4b67d716d43748f93a2);
+            
+        
+
+        marker_60a022ef71456e9e9dd79bd57065d6c7.bindPopup(popup_a04eec933c58a3df10ee40d94e0f95f6)
+        ;
+
+        
+    
+    
+            var marker_0b0da4715c4521e1d706a4c7daa865bd = L.marker(
+                [19.38696616, -99.09383342],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_7eba6d2ff0318185b1b081c70e38cab4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0b0da4715c4521e1d706a4c7daa865bd.setIcon(icon_7eba6d2ff0318185b1b081c70e38cab4);
+        
+    
+        var popup_4cbda51c977cd77563a3378b1c0d7709 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9902734d368b93044a0c5e7ec8b8e14c = $(`<div id="html_9902734d368b93044a0c5e7ec8b8e14c" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 14/03/2023</div>`)[0];
+                popup_4cbda51c977cd77563a3378b1c0d7709.setContent(html_9902734d368b93044a0c5e7ec8b8e14c);
+            
+        
+
+        marker_0b0da4715c4521e1d706a4c7daa865bd.bindPopup(popup_4cbda51c977cd77563a3378b1c0d7709)
+        ;
+
+        
+    
+    
+            var marker_030d4b34640ba18df5c6cf4d69fd21f2 = L.marker(
+                [19.38995674, -99.09676507],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_434e2f581c1eb7684c3ff71c534508d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_030d4b34640ba18df5c6cf4d69fd21f2.setIcon(icon_434e2f581c1eb7684c3ff71c534508d5);
+        
+    
+        var popup_c34a2ac3c4f82d53e5ab7a18ff677dd2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_952c3778ab6d1ec472e0655789840e3b = $(`<div id="html_952c3778ab6d1ec472e0655789840e3b" style="width: 100.0%; height: 100.0%;">Delito: LESIONES DOLOSAS POR DISPARO DE ARMA DE FUEGO<br>Fecha: 22/03/2023</div>`)[0];
+                popup_c34a2ac3c4f82d53e5ab7a18ff677dd2.setContent(html_952c3778ab6d1ec472e0655789840e3b);
+            
+        
+
+        marker_030d4b34640ba18df5c6cf4d69fd21f2.bindPopup(popup_c34a2ac3c4f82d53e5ab7a18ff677dd2)
+        ;
+
+        
+    
+    
+            var marker_5cf60c851fe907f8378e20077641765a = L.marker(
+                [19.38667031, -99.09988135],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_f8c9dce1e666f37e4f112c7470634850 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5cf60c851fe907f8378e20077641765a.setIcon(icon_f8c9dce1e666f37e4f112c7470634850);
+        
+    
+        var popup_b0ffdc5586235eae7b66fcec9d335045 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_168c2b7a4669f0f9b27aff107c853da5 = $(`<div id="html_168c2b7a4669f0f9b27aff107c853da5" style="width: 100.0%; height: 100.0%;">Delito: ROBO A REPARTIDOR CON Y SIN VIOLENCIA<br>Fecha: 22/03/2023</div>`)[0];
+                popup_b0ffdc5586235eae7b66fcec9d335045.setContent(html_168c2b7a4669f0f9b27aff107c853da5);
+            
+        
+
+        marker_5cf60c851fe907f8378e20077641765a.bindPopup(popup_b0ffdc5586235eae7b66fcec9d335045)
+        ;
+
+        
+    
+    
+            var marker_047559dadafb8e213a7f72135c0611a2 = L.marker(
+                [19.38979726, -99.09457393],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_02dfa11706bfa6bc7afe4cca8e5c9079 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_047559dadafb8e213a7f72135c0611a2.setIcon(icon_02dfa11706bfa6bc7afe4cca8e5c9079);
+        
+    
+        var popup_e6746c8912d4189b247e6b6c1afdaf39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_817c544615e44f4438de202572c5504b = $(`<div id="html_817c544615e44f4438de202572c5504b" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 30/03/2023</div>`)[0];
+                popup_e6746c8912d4189b247e6b6c1afdaf39.setContent(html_817c544615e44f4438de202572c5504b);
+            
+        
+
+        marker_047559dadafb8e213a7f72135c0611a2.bindPopup(popup_e6746c8912d4189b247e6b6c1afdaf39)
+        ;
+
+        
+    
+    
+            var marker_b0fce06f7aa6c2bd56deecffacb21e80 = L.marker(
+                [19.38557257, -99.0995121],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_d6b3b479de3b97f57380f76b74ecf641 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b0fce06f7aa6c2bd56deecffacb21e80.setIcon(icon_d6b3b479de3b97f57380f76b74ecf641);
+        
+    
+        var popup_5717d70ef37a73eb8e57f88d31f861c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f31793243bca5d98378ba6ad1c4dfdc = $(`<div id="html_3f31793243bca5d98378ba6ad1c4dfdc" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 31/03/2023</div>`)[0];
+                popup_5717d70ef37a73eb8e57f88d31f861c4.setContent(html_3f31793243bca5d98378ba6ad1c4dfdc);
+            
+        
+
+        marker_b0fce06f7aa6c2bd56deecffacb21e80.bindPopup(popup_5717d70ef37a73eb8e57f88d31f861c4)
+        ;
+
+        
+    
+    
+            var marker_24f5c5046bb08c8673e1bc7e187f453c = L.marker(
+                [19.39102823, -99.09917951],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_56efac07ce24334053cde77a0825f634 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_24f5c5046bb08c8673e1bc7e187f453c.setIcon(icon_56efac07ce24334053cde77a0825f634);
+        
+    
+        var popup_1b7edb68e4d05652f2c8493aefa51a39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3113cd61474d942985a7585109078d9 = $(`<div id="html_b3113cd61474d942985a7585109078d9" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 04/04/2023</div>`)[0];
+                popup_1b7edb68e4d05652f2c8493aefa51a39.setContent(html_b3113cd61474d942985a7585109078d9);
+            
+        
+
+        marker_24f5c5046bb08c8673e1bc7e187f453c.bindPopup(popup_1b7edb68e4d05652f2c8493aefa51a39)
+        ;
+
+        
+    
+    
+            var marker_100ab3fccbc9611accdcc5a1dd2fd80d = L.marker(
+                [19.38763538, -99.0914762],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_fa29ce5cf9a14a2e9167343ced525856 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_100ab3fccbc9611accdcc5a1dd2fd80d.setIcon(icon_fa29ce5cf9a14a2e9167343ced525856);
+        
+    
+        var popup_bf8b47fffc13b32835fa8949acf7ac33 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_726522b57e01d1e77c2ef63a0dc71379 = $(`<div id="html_726522b57e01d1e77c2ef63a0dc71379" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 18/04/2023</div>`)[0];
+                popup_bf8b47fffc13b32835fa8949acf7ac33.setContent(html_726522b57e01d1e77c2ef63a0dc71379);
+            
+        
+
+        marker_100ab3fccbc9611accdcc5a1dd2fd80d.bindPopup(popup_bf8b47fffc13b32835fa8949acf7ac33)
+        ;
+
+        
+    
+    
+            var marker_461156028398d288172cfcf8a28d7299 = L.marker(
+                [19.38766701, -99.09957044],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_10bd93862075e8bb4eb1a3b799dd9718 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_461156028398d288172cfcf8a28d7299.setIcon(icon_10bd93862075e8bb4eb1a3b799dd9718);
+        
+    
+        var popup_b06ac2768035a23327a039d633121e2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3258f7d8f38dfaf56d592b44e988d40 = $(`<div id="html_f3258f7d8f38dfaf56d592b44e988d40" style="width: 100.0%; height: 100.0%;">Delito: ROBO A REPARTIDOR CON Y SIN VIOLENCIA<br>Fecha: 05/05/2023</div>`)[0];
+                popup_b06ac2768035a23327a039d633121e2b.setContent(html_f3258f7d8f38dfaf56d592b44e988d40);
+            
+        
+
+        marker_461156028398d288172cfcf8a28d7299.bindPopup(popup_b06ac2768035a23327a039d633121e2b)
+        ;
+
+        
+    
+    
+            var marker_d90aaedb5404f8d8198b58c2d121a4f6 = L.marker(
+                [19.38963597, -99.09718663],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_aa747b1c4e48ff862973418bbdd82d71 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d90aaedb5404f8d8198b58c2d121a4f6.setIcon(icon_aa747b1c4e48ff862973418bbdd82d71);
+        
+    
+        var popup_82ca4ddff60f3d0026eb2d4ac7d25201 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd4f359ee970c5a4d3166afe8cfa2727 = $(`<div id="html_fd4f359ee970c5a4d3166afe8cfa2727" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 15/05/2023</div>`)[0];
+                popup_82ca4ddff60f3d0026eb2d4ac7d25201.setContent(html_fd4f359ee970c5a4d3166afe8cfa2727);
+            
+        
+
+        marker_d90aaedb5404f8d8198b58c2d121a4f6.bindPopup(popup_82ca4ddff60f3d0026eb2d4ac7d25201)
+        ;
+
+        
+    
+    
+            var marker_a4b52b7d8d71e64171b9a3e05f01653f = L.marker(
+                [19.39033996, -99.09362175],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_540db92b1412482ae24b95b10296fe5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a4b52b7d8d71e64171b9a3e05f01653f.setIcon(icon_540db92b1412482ae24b95b10296fe5e);
+        
+    
+        var popup_958dedc769ae915d9d7035faee3921ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dfcbfff7c5a761b461c65f56751272d3 = $(`<div id="html_dfcbfff7c5a761b461c65f56751272d3" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 19/05/2023</div>`)[0];
+                popup_958dedc769ae915d9d7035faee3921ce.setContent(html_dfcbfff7c5a761b461c65f56751272d3);
+            
+        
+
+        marker_a4b52b7d8d71e64171b9a3e05f01653f.bindPopup(popup_958dedc769ae915d9d7035faee3921ce)
+        ;
+
+        
+    
+    
+            var marker_54eb16e8b094d7bc2b57e87c304bc586 = L.marker(
+                [19.39013933, -99.09890592],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_b53fdd182fab41dcaaf575bfb7ede6cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_54eb16e8b094d7bc2b57e87c304bc586.setIcon(icon_b53fdd182fab41dcaaf575bfb7ede6cb);
+        
+    
+        var popup_602a732abf412e67542c75c94b9e5efd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e30f345370be757b4efad8eeb6ddc32b = $(`<div id="html_e30f345370be757b4efad8eeb6ddc32b" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 30/05/2023</div>`)[0];
+                popup_602a732abf412e67542c75c94b9e5efd.setContent(html_e30f345370be757b4efad8eeb6ddc32b);
+            
+        
+
+        marker_54eb16e8b094d7bc2b57e87c304bc586.bindPopup(popup_602a732abf412e67542c75c94b9e5efd)
+        ;
+
+        
+    
+    
+            var marker_b2edab25d347741f87096dedc249b790 = L.marker(
+                [19.3898062, -99.09574628],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_92f201d89fe7577fd29e2ccb56f65593 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b2edab25d347741f87096dedc249b790.setIcon(icon_92f201d89fe7577fd29e2ccb56f65593);
+        
+    
+        var popup_993ce0d3c4fdea537969501fa2d7b42f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_361851c9c6396d2359529ea9ffd6fe4d = $(`<div id="html_361851c9c6396d2359529ea9ffd6fe4d" style="width: 100.0%; height: 100.0%;">Delito: LESIONES DOLOSAS POR DISPARO DE ARMA DE FUEGO<br>Fecha: 05/06/2023</div>`)[0];
+                popup_993ce0d3c4fdea537969501fa2d7b42f.setContent(html_361851c9c6396d2359529ea9ffd6fe4d);
+            
+        
+
+        marker_b2edab25d347741f87096dedc249b790.bindPopup(popup_993ce0d3c4fdea537969501fa2d7b42f)
+        ;
+
+        
+    
+    
+            var marker_22ba98849075d4a8268ac40d04446082 = L.marker(
+                [19.38752298, -99.09778006],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_762695617daed8e8e74aa03313a1bc36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_22ba98849075d4a8268ac40d04446082.setIcon(icon_762695617daed8e8e74aa03313a1bc36);
+        
+    
+        var popup_939199fdb96316e76eb9ab7946efdf8f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e739ab26ff3c6dcf11708c5e3b9eba7a = $(`<div id="html_e739ab26ff3c6dcf11708c5e3b9eba7a" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 25/06/2023</div>`)[0];
+                popup_939199fdb96316e76eb9ab7946efdf8f.setContent(html_e739ab26ff3c6dcf11708c5e3b9eba7a);
+            
+        
+
+        marker_22ba98849075d4a8268ac40d04446082.bindPopup(popup_939199fdb96316e76eb9ab7946efdf8f)
+        ;
+
+        
+    
+    
+            var marker_ae92569b2e7c3880788945294313f25a = L.marker(
+                [19.38839639, -99.09947347],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_d978c22d0451c3082bd5a49cba9b206c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ae92569b2e7c3880788945294313f25a.setIcon(icon_d978c22d0451c3082bd5a49cba9b206c);
+        
+    
+        var popup_b94d722c2876d42aee8919392ab4b59e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce649e179c524a550d5bcd07560f060f = $(`<div id="html_ce649e179c524a550d5bcd07560f060f" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 30/06/2023</div>`)[0];
+                popup_b94d722c2876d42aee8919392ab4b59e.setContent(html_ce649e179c524a550d5bcd07560f060f);
+            
+        
+
+        marker_ae92569b2e7c3880788945294313f25a.bindPopup(popup_b94d722c2876d42aee8919392ab4b59e)
+        ;
+
+        
+    
+    
+            var marker_ea1df525677bb15806ece48eb39f0ba7 = L.marker(
+                [19.38915221, -99.09363134],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_416c854a32f0472a801cb6acdf8ed934 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ea1df525677bb15806ece48eb39f0ba7.setIcon(icon_416c854a32f0472a801cb6acdf8ed934);
+        
+    
+        var popup_447eeb1ddd81423a51e120ee100bcdc7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8476591bdb5295c09af34dd09fad6dec = $(`<div id="html_8476591bdb5295c09af34dd09fad6dec" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 02/07/2023</div>`)[0];
+                popup_447eeb1ddd81423a51e120ee100bcdc7.setContent(html_8476591bdb5295c09af34dd09fad6dec);
+            
+        
+
+        marker_ea1df525677bb15806ece48eb39f0ba7.bindPopup(popup_447eeb1ddd81423a51e120ee100bcdc7)
+        ;
+
+        
+    
+    
+            var marker_8c17260949d39c6b6b5afd2a0d004896 = L.marker(
+                [19.38804391, -99.09950249],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_c22624323b20c3e0aba9f458592d2dd5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8c17260949d39c6b6b5afd2a0d004896.setIcon(icon_c22624323b20c3e0aba9f458592d2dd5);
+        
+    
+        var popup_0de92049bbfe0fe09960f25fafba8130 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1b1ef6902b5bad2acc56e79fa2213e0 = $(`<div id="html_b1b1ef6902b5bad2acc56e79fa2213e0" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 05/07/2023</div>`)[0];
+                popup_0de92049bbfe0fe09960f25fafba8130.setContent(html_b1b1ef6902b5bad2acc56e79fa2213e0);
+            
+        
+
+        marker_8c17260949d39c6b6b5afd2a0d004896.bindPopup(popup_0de92049bbfe0fe09960f25fafba8130)
+        ;
+
+        
+    
+    
+            var marker_5508ce9512b26b027b1f8f0823210c97 = L.marker(
+                [19.38527477, -99.0981254],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_c84522d18b04c0f01dace5243f723713 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5508ce9512b26b027b1f8f0823210c97.setIcon(icon_c84522d18b04c0f01dace5243f723713);
+        
+    
+        var popup_3152df911075e316039564bdb7f2447e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00072baa3e5ab319bc1c3af29f07404d = $(`<div id="html_00072baa3e5ab319bc1c3af29f07404d" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 12/07/2023</div>`)[0];
+                popup_3152df911075e316039564bdb7f2447e.setContent(html_00072baa3e5ab319bc1c3af29f07404d);
+            
+        
+
+        marker_5508ce9512b26b027b1f8f0823210c97.bindPopup(popup_3152df911075e316039564bdb7f2447e)
+        ;
+
+        
+    
+    
+            var marker_a85bd66b5d0bf26a6f3b6e564b34edff = L.marker(
+                [19.38446179, -99.09449346],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_9033d8744c2e8951f3988e2b1533308e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a85bd66b5d0bf26a6f3b6e564b34edff.setIcon(icon_9033d8744c2e8951f3988e2b1533308e);
+        
+    
+        var popup_5290050bdd179f806da5f748011d4a45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_caa37932004610f3516b8c2006d0d42f = $(`<div id="html_caa37932004610f3516b8c2006d0d42f" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 14/07/2023</div>`)[0];
+                popup_5290050bdd179f806da5f748011d4a45.setContent(html_caa37932004610f3516b8c2006d0d42f);
+            
+        
+
+        marker_a85bd66b5d0bf26a6f3b6e564b34edff.bindPopup(popup_5290050bdd179f806da5f748011d4a45)
+        ;
+
+        
+    
+    
+            var marker_5743fccac750b6fdb4e60988fd6c39a0 = L.marker(
+                [19.38841014, -99.09695596],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_883608916cf63405d07892edda28be71 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5743fccac750b6fdb4e60988fd6c39a0.setIcon(icon_883608916cf63405d07892edda28be71);
+        
+    
+        var popup_ac3393e35fd78e5af18b39fc93430c75 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b556001aab6d3533ec2e55e87abc937 = $(`<div id="html_4b556001aab6d3533ec2e55e87abc937" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 14/07/2023</div>`)[0];
+                popup_ac3393e35fd78e5af18b39fc93430c75.setContent(html_4b556001aab6d3533ec2e55e87abc937);
+            
+        
+
+        marker_5743fccac750b6fdb4e60988fd6c39a0.bindPopup(popup_ac3393e35fd78e5af18b39fc93430c75)
+        ;
+
+        
+    
+    
+            var marker_54b9fa39e7b08e4e2c0dfba829246901 = L.marker(
+                [19.38803612, -99.09941262],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_22e2ef0b85814d23961ffed4915da777 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_54b9fa39e7b08e4e2c0dfba829246901.setIcon(icon_22e2ef0b85814d23961ffed4915da777);
+        
+    
+        var popup_c01c3f57c799368137ab3028de38615a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ca76e00b4ead87d22ea72c659697236 = $(`<div id="html_1ca76e00b4ead87d22ea72c659697236" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 23/07/2023</div>`)[0];
+                popup_c01c3f57c799368137ab3028de38615a.setContent(html_1ca76e00b4ead87d22ea72c659697236);
+            
+        
+
+        marker_54b9fa39e7b08e4e2c0dfba829246901.bindPopup(popup_c01c3f57c799368137ab3028de38615a)
+        ;
+
+        
+    
+    
+            var marker_b01a9918c93b51117e64473aad2f4933 = L.marker(
+                [19.38891989, -99.09902392],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_0ec5894f2a1726dfe1db5cae96768359 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b01a9918c93b51117e64473aad2f4933.setIcon(icon_0ec5894f2a1726dfe1db5cae96768359);
+        
+    
+        var popup_dbbee33a58b5d30fd1078c4c5278753f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24e7ddfad550089d07415de3b6efd4c4 = $(`<div id="html_24e7ddfad550089d07415de3b6efd4c4" style="width: 100.0%; height: 100.0%;">Delito: ROBO A REPARTIDOR CON Y SIN VIOLENCIA<br>Fecha: 12/08/2023</div>`)[0];
+                popup_dbbee33a58b5d30fd1078c4c5278753f.setContent(html_24e7ddfad550089d07415de3b6efd4c4);
+            
+        
+
+        marker_b01a9918c93b51117e64473aad2f4933.bindPopup(popup_dbbee33a58b5d30fd1078c4c5278753f)
+        ;
+
+        
+    
+    
+            var marker_4524d69399e1ddda65a31d4382d5a36a = L.marker(
+                [19.39097754, -99.09911625],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_143acbbd527af03e2143c94350003c34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4524d69399e1ddda65a31d4382d5a36a.setIcon(icon_143acbbd527af03e2143c94350003c34);
+        
+    
+        var popup_e08674c6c78116409a598b8cbcc83e1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f57695ff6b7c98db1c5fc04283394efc = $(`<div id="html_f57695ff6b7c98db1c5fc04283394efc" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 13/09/2023</div>`)[0];
+                popup_e08674c6c78116409a598b8cbcc83e1b.setContent(html_f57695ff6b7c98db1c5fc04283394efc);
+            
+        
+
+        marker_4524d69399e1ddda65a31d4382d5a36a.bindPopup(popup_e08674c6c78116409a598b8cbcc83e1b)
+        ;
+
+        
+    
+    
+            var marker_ffd3a6018370909a09ddc101a5b22f17 = L.marker(
+                [19.38884215, -99.09933887],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_2c4598eaff945fd601812dcb5c56f403 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ffd3a6018370909a09ddc101a5b22f17.setIcon(icon_2c4598eaff945fd601812dcb5c56f403);
+        
+    
+        var popup_8be6744f398d45bb5c1ccb3defb15d1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ca6eab16daaa912d4c8977c464c9536 = $(`<div id="html_9ca6eab16daaa912d4c8977c464c9536" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 22/09/2023</div>`)[0];
+                popup_8be6744f398d45bb5c1ccb3defb15d1d.setContent(html_9ca6eab16daaa912d4c8977c464c9536);
+            
+        
+
+        marker_ffd3a6018370909a09ddc101a5b22f17.bindPopup(popup_8be6744f398d45bb5c1ccb3defb15d1d)
+        ;
+
+        
+    
+    
+            var marker_642efbb0027746d3859debc2e7f0c348 = L.marker(
+                [19.38806605, -99.09908964],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_f09a7379e22a043cd0d4faea35135c8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_642efbb0027746d3859debc2e7f0c348.setIcon(icon_f09a7379e22a043cd0d4faea35135c8e);
+        
+    
+        var popup_2c4f51e6af9ececf3377b9c6701a21c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3473de0a6ae5ab0abab51b16e588da11 = $(`<div id="html_3473de0a6ae5ab0abab51b16e588da11" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 24/09/2023</div>`)[0];
+                popup_2c4f51e6af9ececf3377b9c6701a21c5.setContent(html_3473de0a6ae5ab0abab51b16e588da11);
+            
+        
+
+        marker_642efbb0027746d3859debc2e7f0c348.bindPopup(popup_2c4f51e6af9ececf3377b9c6701a21c5)
+        ;
+
+        
+    
+    
+            var marker_908c2d13fe441b7bb81577a7625e12d4 = L.marker(
+                [19.38802139, -99.09949511],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_c2786a896351b464f0bb65c8c8db210c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_908c2d13fe441b7bb81577a7625e12d4.setIcon(icon_c2786a896351b464f0bb65c8c8db210c);
+        
+    
+        var popup_8009b25ea32397997a05ae4e75c0d89b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_264da446dcdab5d975770c2b5d6873c0 = $(`<div id="html_264da446dcdab5d975770c2b5d6873c0" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 06/10/2023</div>`)[0];
+                popup_8009b25ea32397997a05ae4e75c0d89b.setContent(html_264da446dcdab5d975770c2b5d6873c0);
+            
+        
+
+        marker_908c2d13fe441b7bb81577a7625e12d4.bindPopup(popup_8009b25ea32397997a05ae4e75c0d89b)
+        ;
+
+        
+    
+    
+            var marker_77009adb807b77ffea9f45fbe90a769b = L.marker(
+                [19.38921182, -99.09090053],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_a442c2412fad1d31b85089101c68dc7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_77009adb807b77ffea9f45fbe90a769b.setIcon(icon_a442c2412fad1d31b85089101c68dc7c);
+        
+    
+        var popup_2cfebf5c74ecdf1302fdd4472d908479 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bd7552935bcf77542932829b8d01487 = $(`<div id="html_8bd7552935bcf77542932829b8d01487" style="width: 100.0%; height: 100.0%;">Delito: ROBO A REPARTIDOR CON Y SIN VIOLENCIA<br>Fecha: 09/10/2023</div>`)[0];
+                popup_2cfebf5c74ecdf1302fdd4472d908479.setContent(html_8bd7552935bcf77542932829b8d01487);
+            
+        
+
+        marker_77009adb807b77ffea9f45fbe90a769b.bindPopup(popup_2cfebf5c74ecdf1302fdd4472d908479)
+        ;
+
+        
+    
+    
+            var marker_4424171a68d310e672c6e3a79c5cdde2 = L.marker(
+                [19.38617478, -99.09650669],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_3c5050fce2242b1599b1a861cb671c5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4424171a68d310e672c6e3a79c5cdde2.setIcon(icon_3c5050fce2242b1599b1a861cb671c5d);
+        
+    
+        var popup_a6f986dd272455ff92bb2f16f67fbb81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4adff064d5833fb6e11a980d5a113bd3 = $(`<div id="html_4adff064d5833fb6e11a980d5a113bd3" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 17/10/2023</div>`)[0];
+                popup_a6f986dd272455ff92bb2f16f67fbb81.setContent(html_4adff064d5833fb6e11a980d5a113bd3);
+            
+        
+
+        marker_4424171a68d310e672c6e3a79c5cdde2.bindPopup(popup_a6f986dd272455ff92bb2f16f67fbb81)
+        ;
+
+        
+    
+    
+            var marker_f8d6561d824ee63b62059a8515bbf696 = L.marker(
+                [19.38791281, -99.09039947],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_0617f9849523e6033674fadad97da960 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f8d6561d824ee63b62059a8515bbf696.setIcon(icon_0617f9849523e6033674fadad97da960);
+        
+    
+        var popup_3daee878295dbaf87b0a1da8778ace35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b08d5fb6797dec8bd36825924043dfd0 = $(`<div id="html_b08d5fb6797dec8bd36825924043dfd0" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 26/10/2023</div>`)[0];
+                popup_3daee878295dbaf87b0a1da8778ace35.setContent(html_b08d5fb6797dec8bd36825924043dfd0);
+            
+        
+
+        marker_f8d6561d824ee63b62059a8515bbf696.bindPopup(popup_3daee878295dbaf87b0a1da8778ace35)
+        ;
+
+        
+    
+    
+            var marker_86f3afa17389d9807858a9d3ca354f0c = L.marker(
+                [19.3896995, -99.09334045],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_cf8fa0d861dfff7223de991bfc44eb83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_86f3afa17389d9807858a9d3ca354f0c.setIcon(icon_cf8fa0d861dfff7223de991bfc44eb83);
+        
+    
+        var popup_675d5cf1f722f0d5e94a26a1b0406b02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2199089ff03e918f5cf1e72fdcf023cc = $(`<div id="html_2199089ff03e918f5cf1e72fdcf023cc" style="width: 100.0%; height: 100.0%;">Delito: ROBO DE VEHÍCULO CON Y SIN VIOLENCIA<br>Fecha: 29/10/2023</div>`)[0];
+                popup_675d5cf1f722f0d5e94a26a1b0406b02.setContent(html_2199089ff03e918f5cf1e72fdcf023cc);
+            
+        
+
+        marker_86f3afa17389d9807858a9d3ca354f0c.bindPopup(popup_675d5cf1f722f0d5e94a26a1b0406b02)
+        ;
+
+        
+    
+    
+            var marker_cc4a5637c0b89827b3f4044dc59057e1 = L.marker(
+                [19.38871523, -99.09226897],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_852b28bd08d38c3ae13b6a2643220bfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cc4a5637c0b89827b3f4044dc59057e1.setIcon(icon_852b28bd08d38c3ae13b6a2643220bfd);
+        
+    
+        var popup_ac122ad4f52faced574175d6da64afb3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_353a243c39f8daf45359461ed0646ab3 = $(`<div id="html_353a243c39f8daf45359461ed0646ab3" style="width: 100.0%; height: 100.0%;">Delito: VIOLACIÓN<br>Fecha: 02/11/2023</div>`)[0];
+                popup_ac122ad4f52faced574175d6da64afb3.setContent(html_353a243c39f8daf45359461ed0646ab3);
+            
+        
+
+        marker_cc4a5637c0b89827b3f4044dc59057e1.bindPopup(popup_ac122ad4f52faced574175d6da64afb3)
+        ;
+
+        
+    
+    
+            var marker_98849a3fb149904bb10ccd1b83b17d97 = L.marker(
+                [19.38690671, -99.09353614],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_fbf07bb09cedca4190d5a30ba6bf9c4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_98849a3fb149904bb10ccd1b83b17d97.setIcon(icon_fbf07bb09cedca4190d5a30ba6bf9c4e);
+        
+    
+        var popup_666c3ed8ad9c543bc9c4195e9f06ecdd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2ce32bd6bc0bd0c411632603469005d0 = $(`<div id="html_2ce32bd6bc0bd0c411632603469005d0" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 30/11/2023</div>`)[0];
+                popup_666c3ed8ad9c543bc9c4195e9f06ecdd.setContent(html_2ce32bd6bc0bd0c411632603469005d0);
+            
+        
+
+        marker_98849a3fb149904bb10ccd1b83b17d97.bindPopup(popup_666c3ed8ad9c543bc9c4195e9f06ecdd)
+        ;
+
+        
+    
+    
+            var marker_78911c843e3a22c2c5c99f050781216f = L.marker(
+                [19.38576944, -99.09999975],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_d0e14fd1a40dd8107e165c1a3f38c8b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_78911c843e3a22c2c5c99f050781216f.setIcon(icon_d0e14fd1a40dd8107e165c1a3f38c8b2);
+        
+    
+        var popup_cf7b8ddb8f427c0fbcacd4b5d806ec41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d45e280ec5a5c209a4cf7bea753569a = $(`<div id="html_6d45e280ec5a5c209a4cf7bea753569a" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 01/12/2023</div>`)[0];
+                popup_cf7b8ddb8f427c0fbcacd4b5d806ec41.setContent(html_6d45e280ec5a5c209a4cf7bea753569a);
+            
+        
+
+        marker_78911c843e3a22c2c5c99f050781216f.bindPopup(popup_cf7b8ddb8f427c0fbcacd4b5d806ec41)
+        ;
+
+        
+    
+    
+            var marker_f426d9e5b4bbfffaa230815e3356aedc = L.marker(
+                [19.38638343, -99.09658112],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_a304b237d3585ab88969af4a0b1d4950 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f426d9e5b4bbfffaa230815e3356aedc.setIcon(icon_a304b237d3585ab88969af4a0b1d4950);
+        
+    
+        var popup_d3cd0ecceb45d203a37bc316c0ddcef2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e6262a8028807fd74a614a687d7ecdc = $(`<div id="html_4e6262a8028807fd74a614a687d7ecdc" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 06/12/2023</div>`)[0];
+                popup_d3cd0ecceb45d203a37bc316c0ddcef2.setContent(html_4e6262a8028807fd74a614a687d7ecdc);
+            
+        
+
+        marker_f426d9e5b4bbfffaa230815e3356aedc.bindPopup(popup_d3cd0ecceb45d203a37bc316c0ddcef2)
+        ;
+
+        
+    
+    
+            var marker_161b59ef253dbdd42289974b168aa4ef = L.marker(
+                [19.38800524, -99.09941487],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_bcf38cfa72312125c5e7efc8b0e90888 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_161b59ef253dbdd42289974b168aa4ef.setIcon(icon_bcf38cfa72312125c5e7efc8b0e90888);
+        
+    
+        var popup_cd50f0f774912e65fdf11ce7424c9f48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e6a0322e9089e426edc714e601d15dd = $(`<div id="html_0e6a0322e9089e426edc714e601d15dd" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 14/01/2024</div>`)[0];
+                popup_cd50f0f774912e65fdf11ce7424c9f48.setContent(html_0e6a0322e9089e426edc714e601d15dd);
+            
+        
+
+        marker_161b59ef253dbdd42289974b168aa4ef.bindPopup(popup_cd50f0f774912e65fdf11ce7424c9f48)
+        ;
+
+        
+    
+    
+            var marker_a11cb21d09a635919abbdf18f9fe6864 = L.marker(
+                [19.38797534, -99.09935653],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_6dde611a5247e3857f33f6a8f7b9499e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a11cb21d09a635919abbdf18f9fe6864.setIcon(icon_6dde611a5247e3857f33f6a8f7b9499e);
+        
+    
+        var popup_4648bb103201168b72f33d8cee124c76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09ff8ae2345a453700b6b9a8aab2b414 = $(`<div id="html_09ff8ae2345a453700b6b9a8aab2b414" style="width: 100.0%; height: 100.0%;">Delito: ROBO A NEGOCIO CON VIOLENCIA<br>Fecha: 31/01/2024</div>`)[0];
+                popup_4648bb103201168b72f33d8cee124c76.setContent(html_09ff8ae2345a453700b6b9a8aab2b414);
+            
+        
+
+        marker_a11cb21d09a635919abbdf18f9fe6864.bindPopup(popup_4648bb103201168b72f33d8cee124c76)
+        ;
+
+        
+    
+    
+            var marker_a218ef608d30d5fe4a273b913483d285 = L.marker(
+                [19.38579075, -99.09584686],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_0c6152bc3537dd9c6ad585d5746a0b7a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a218ef608d30d5fe4a273b913483d285.setIcon(icon_0c6152bc3537dd9c6ad585d5746a0b7a);
+        
+    
+        var popup_8f4baec07d80a1261ec40f1856664e10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efbff76c82a1f4c54dd10691ee1f337f = $(`<div id="html_efbff76c82a1f4c54dd10691ee1f337f" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 31/01/2024</div>`)[0];
+                popup_8f4baec07d80a1261ec40f1856664e10.setContent(html_efbff76c82a1f4c54dd10691ee1f337f);
+            
+        
+
+        marker_a218ef608d30d5fe4a273b913483d285.bindPopup(popup_8f4baec07d80a1261ec40f1856664e10)
+        ;
+
+        
+    
+    
+            var marker_db44b9b704658290ec10cbb281fca8ac = L.marker(
+                [19.38886155, -99.09981626],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_4228c96f2307c1be874df0ace144b5a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_db44b9b704658290ec10cbb281fca8ac.setIcon(icon_4228c96f2307c1be874df0ace144b5a6);
+        
+    
+        var popup_de74fda2c174ba08732bfe7ca1935380 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82e8217e5fbaa73382395047412d8461 = $(`<div id="html_82e8217e5fbaa73382395047412d8461" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 02/02/2024</div>`)[0];
+                popup_de74fda2c174ba08732bfe7ca1935380.setContent(html_82e8217e5fbaa73382395047412d8461);
+            
+        
+
+        marker_db44b9b704658290ec10cbb281fca8ac.bindPopup(popup_de74fda2c174ba08732bfe7ca1935380)
+        ;
+
+        
+    
+    
+            var marker_8a777fe47a843a7348497e4426187a5d = L.marker(
+                [19.38474263, -99.09601249],
+                {}
+            ).addTo(map_9a87f1af6802207d8fb033bd08aac730);
+        
+    
+            var icon_51ed344af2a56b8920741b553932568a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8a777fe47a843a7348497e4426187a5d.setIcon(icon_51ed344af2a56b8920741b553932568a);
+        
+    
+        var popup_487347f3235feb8b6ddd1cd83d60e4d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_667dc9a2bbed252b73f1654f43ccc3df = $(`<div id="html_667dc9a2bbed252b73f1654f43ccc3df" style="width: 100.0%; height: 100.0%;">Delito: ROBO A TRANSEUNTE EN VÍA PÚBLICA CON Y SIN VIOLENCIA<br>Fecha: 09/02/2024</div>`)[0];
+                popup_487347f3235feb8b6ddd1cd83d60e4d6.setContent(html_667dc9a2bbed252b73f1654f43ccc3df);
+            
+        
+
+        marker_8a777fe47a843a7348497e4426187a5d.bindPopup(popup_487347f3235feb8b6ddd1cd83d60e4d6)
+        ;
+
+        
+    
+</script>
+</html>
